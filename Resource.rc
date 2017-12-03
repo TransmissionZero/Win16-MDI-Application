@@ -10,7 +10,6 @@
 #define APSTUDIO_HIDDEN_SYMBOLS
 #include "windows.h"
 #undef APSTUDIO_HIDDEN_SYMBOLS
-#include "ver.h"
 
 /////////////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
@@ -57,41 +56,6 @@ END
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// Version
-//
-
-VS_VERSION_INFO VERSIONINFO
-FILEVERSION 1,0,0,0
-PRODUCTVERSION 1,0,0,0
-FILEFLAGSMASK 0x3fL
-FILEFLAGS 0x0L
-FILEOS 0x10001L
-FILETYPE 0x1L
-FILESUBTYPE 0x0L
-BEGIN
-    BLOCK "StringFileInfo"
-    BEGIN
-        BLOCK "080904b0"
-        BEGIN
-            VALUE "CompanyName", "Transmission Zero\0"
-            VALUE "FileDescription", "Win16 MDI Application\0"
-            VALUE "FileVersion", "1.0.0.0\0"
-            VALUE "InternalName", "Win16MDI\0"
-            VALUE "LegalCopyright", "\2512017 Transmission Zero\0"
-            VALUE "OriginalFilename", "Win16MDI.exe\0"
-            VALUE "ProductName", "Win16 MDI Application\0"
-            VALUE "ProductVersion", "1.0.0.0\0"
-        END
-    END
-    BLOCK "VarFileInfo"
-    BEGIN
-        VALUE "Translation", 0x809, 1200 
-    END
-END
-
-
-//////////////////////////////////////////////////////////////////////////////
-//
 // Dialog
 //
 
@@ -114,7 +78,7 @@ END
 
 IDR_ACCELERATOR ACCELERATORS DISCARDABLE 
 BEGIN
-    "A",            ID_HELP_ABOUT,          VIRTKEY,ALT, NOINVERT
+    "a",            ID_HELP_ABOUT,          ASCII,  ALT, NOINVERT
     "N",            ID_FILE_NEW,            VIRTKEY,CONTROL, NOINVERT
     "O",            ID_FILE_OPEN,           VIRTKEY,CONTROL, NOINVERT
     "S",            ID_FILE_SAVE,           VIRTKEY,CONTROL, NOINVERT
@@ -138,14 +102,12 @@ BEGIN
     "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
     "#include ""windows.h""\r\n"
     "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
-    "#include ""ver.h""\r\n"
     "\0"
 END
 
 3 TEXTINCLUDE DISCARDABLE 
 BEGIN
-    "\r\n"
-    "\0"
+    "#include ""Win16MDI.ver""\0"
 END
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -157,8 +119,7 @@ END
 //
 // Generated from the TEXTINCLUDE 3 resource.
 //
-
-
+#include "Win16MDI.ver"
 /////////////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
 

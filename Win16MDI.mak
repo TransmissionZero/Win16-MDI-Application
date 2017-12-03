@@ -56,31 +56,26 @@ SBRS = ABOUTDLG.SBR \
 
 
 ABOUTDLG_DEP = aboutdlg.h \
-	globals.h \
-	resource.h
+	globals.h
 
 
 MAINWND_DEP = aboutdlg.h \
 	globals.h \
 	mainwnd.h \
-	mdichwnd.h \
-	resource.h
+	mdichwnd.h
 
 
-RESOURCE_RCDEP = resource.h \
-	app.ico
+RESOURCE_RCDEP = app.ico
 
 
 WINMAIN_DEP = globals.h \
 	mainwnd.h \
-	mdichwnd.h \
-	resource.h
+	mdichwnd.h
 
 
 MDICHWND_DEP = globals.h \
 	mainwnd.h \
-	mdichwnd.h \
-	resource.h
+	mdichwnd.h
 
 
 all:	$(PROJ).EXE $(PROJ).BSC
